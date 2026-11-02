@@ -7,8 +7,9 @@ A Python script that generates trend analysis for synthetic daily transaction hi
 ## What It Does
 
 - Generates 18-months realistic transaction data
-- Uses numpy to create seasonal variation(highest in Dec, lowest in Feb)
+- Uses numpy to create seasonal variation
 - Resamples daily transactional data to monthly totals
+- Creates month-to-month growth and 30-day rolling average
 - Plots chart of monthly bars alongside 30-day rolling average
 - Saves the chart as PNG
 
@@ -26,19 +27,13 @@ pip install -r requirements.txt
 
 ## Usage
 
-```
 Run the program from the project's folder
 
+```
 python nrb_spmarket_analysis.py
-
-
 ```
 ## How It Works
 Transaction analysis chart is generated alongside a 30-day rolling average, after resampling monthly totals. The chart is then saved as a PNG.
-
-***
- plot the monthly bars alongside a 30-day rolling average, and add a title and labels a non-technical manager can read. Save the chart as a PNG. ***
-
  
 ```python
 daily["growth"] = daily["transactions"].pct_change() * 100
@@ -66,4 +61,4 @@ Date
 
 ## Stack
 
-Python, Pandas, Numpy, Matplotlib
+Python, matplotlib
