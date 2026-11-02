@@ -61,4 +61,4 @@ Date
 
 ## Stack
 
-Python, matplotlib
+Python, Pandas, Numpy, Matplotlib
